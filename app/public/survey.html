@@ -4,10 +4,241 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Survey | Friend Finder</title>
+    <title>Friend Finder</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="/jsfiles/app.js"></script>
 </head>
+
+<body>
+    <h2 id="surveytitle">Survey Questions</h2>
+    <hr class="my-4">
+    <div class="greythis">
+      <form class="needs-validation" novalidate>
+        <h2>About You</h2>
+        <input id="name" class="form-control form-control-lg col-lg-8" type="text" placeholder="Name (required)">
+        <input id="photo" class="form-control form-control-lg col-lg-8" type="text"
+          placeholder="Link to Photo Image (required)">
+        <hr class="my-4">
+  
+        <h3>Question 1</h3>
+        <p>Your mind is always buzzing with unexplored ideas and plans.</p>
+        <div class="col-md-3 mb-3">
+          <label for="validationCustom01"></label>
+          <select id="validationCustom01" class="custom-select" required>
+            <option selected disabled value="">Choose...</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid answer.
+          </div>
+        </div>
+        <hr class="my-4">
+  
+        <h3>Question 2</h3>
+        <p>Generally speaking, you rely more on your experience than your imagination.</p>
+        <div class="col-md-3 mb-3">
+          <label for="validationCustom02"></label>
+          <select id="validationCustom02" class="custom-select" required>
+            <option selected disabled value="">Choose...</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid answer.
+          </div>
+        </div>
+        <hr class="my-4">
+  
+        <h3>Question 3</h3>
+        <p>You find it easy to stay relaxed and focused even when there is some pressure.</p>
+        <div class="col-md-3 mb-3">
+          <label for="validationCustom03"></label>
+          <select id="validationCustom03" class="custom-select" required>
+            <option selected disabled value="">Choose...</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid answer.
+          </div>
+        </div>
+        <hr class="my-4">
+  
+        <h3>Question 4</h3>
+        <p>You rarely do something just out of sheer curiosity.</p>
+        <div class="col-md-3 mb-3">
+          <label for="validationCustom04"></label>
+          <select id="validationCustom04" class="custom-select" required>
+            <option selected disabled value="">Choose...</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid answer.
+          </div>
+        </div>
+        <hr class="my-4">
+  
+        <h3>Question 5</h3>
+        <p>People can rarely upset you.</p>
+        <div class="col-md-3 mb-3">
+          <label for="validationCustom05"></label>
+          <select id="validationCustom05" class="custom-select" required>
+            <option selected disabled value="">Choose...</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid answer.
+          </div>
+        </div>
+        <hr class="my-4">
+  
+        <h3>Question 6</h3>
+        <p>It is often difficult for you to relate to other people’s feelings.</p>
+        <div class="col-md-3 mb-3">
+          <label for="validationCustom06"></label>
+          <select id="validationCustom06" class="custom-select" required>
+            <option selected disabled value="">Choose...</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid answer.
+          </div>
+        </div>
+        <hr class="my-4">
+  
+        <h3>Question 7</h3>
+        <p>In a discussion, truth should be more important than people’s sensitivities.</p>
+        <div class="col-md-3 mb-3">
+          <label for="validationCustom07"></label>
+          <select id="validationCustom07" class="custom-select" required>
+            <option selected disabled value="">Choose...</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid answer.
+          </div>
+        </div>
+        <hr class="my-4">
+  
+        <h3>Question 8</h3>
+        <p>You rarely get carried away by fantasies and ideas.</p>
+        <div class="col-md-3 mb-3">
+          <label for="validationCustom08"></label>
+          <select id="validationCustom08" class="custom-select" required>
+            <option selected disabled value="">Choose...</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid answer.
+          </div>
+        </div>
+        <hr class="my-4">
+  
+        <h3>Question 9</h3>
+        <p>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.
+        </p>
+        <div class="col-md-3 mb-3">
+          <label for="validationCustom09"></label>
+          <select id="validationCustom09" class="custom-select" required>
+            <option selected disabled value="">Choose...</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid answer.
+          </div>
+        </div>
+        <hr class="my-4">
+  
+        <h3>Question 10</h3>
+        <p>You feel more energetic after spending time with a group of people.</p>
+        <div class="col-md-3 mb-3">
+          <label for="validationCustom10"></label>
+          <select id="validationCustom10" class="custom-select" required>
+            <option selected disabled value="">Choose...</option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid answer.
+          </div>
+        </div>
+  
+        <button id="submit" type="submit" class="btn btn-primary btn-lg btn-block">Submit!</button>
+        <hr class="my-4">
+      </form>
+  
+      <div class="row">
+        <div id="thelinks" class="col-lg-6 text-center">
+          <a href="/">Home</a href="/api/friends/">
+          |
+          <a href="/api/friends/">API Friends List</a>
+          |
+          <a href="https://github.com/nicholasherrick/FriendFinder">GitHub Repo</a>
+        </div id="thelinks">
+      </div>
+    </div>
+  
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+  
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Your Match</h4>
+            <button type="button" class="close closemodal" data-dismiss="modal">&times;</button>
+          </div>
+          <div id="match" class="modal-body">
+            <!-- Match goes here -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default closemodal" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  
+  </body>
+  
+  </html>
