@@ -5,9 +5,7 @@ module.exports = (app) =>{
         res.json(friends);
     });
 
-    app.post('/api/friends/', (req, res) =>{
-        console.log('New user added to friends');
-        
+    app.post('/api/friends/', (req, res) =>{        
         var maxDifference = 100;
         var potentialMatch
         var client = req.body
@@ -21,7 +19,9 @@ module.exports = (app) =>{
                 maxDifference = scoreDifference;
                 potentialMatch = friend;
             }
+            console.log(scoreDifference);
         });
        res.json(potentialMatch);
+       console.log(potentialMatch);
     });
 }
