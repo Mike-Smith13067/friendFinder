@@ -3,6 +3,8 @@
 ABOUT:
 This application will ask the user to fill out a 10 question survey using a rated answer scale(1-5). The app will then compare the users answers to the profiles in the database and will determine the best (closest) match. THe best match will be displayed in a modal pop up window that includes a photo image.
 
+[Try all 1's in the survey]
+
 Tools used:
 Node.js
 Express

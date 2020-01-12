@@ -210,7 +210,8 @@
         </div>
       </div>
 
-      <button id="submit" type="submit" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#myModal">Submit!</button>
+      <button id="submit" type="submit" class="btn btn-primary btn-lg btn-block" data-toggle="modal"
+        data-target="#myModal">Submit!</button>
       <hr class="my-4">
     </form>
 
@@ -224,26 +225,26 @@
       </div id="thelinks">
     </div>
   </div>
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+  <!-- Modal -->
+  <div id="myModal" class="modal fade" role="dialog" data-backdrop="static">
+    <div class="modal-dialog">
 
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Your Match</h4>
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Your Match</h4>
+        </div>
+        <div class="modal-body" id = "error">
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="close" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
       </div>
-      <div class="modal-body">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
+
     </div>
-
   </div>
-</div>
-  
+
 
 </body>
 <script type="text/javascript">
@@ -261,14 +262,17 @@
     var question8 = $('#q8').val();
     var question9 = $('#q9').val();
     var question10 = $('#q10').val();
-    if ($("#name").val() == "" || $("#photo").val() == "") {
-      $("#error").html("<p> Please provide a valid name and photo link.</p>");
-      return;
-    }
     var scoreArray = [];
     for (var i = 1; i < 11; i++) {
       scoreArray.push(parseInt($("#q" + i).val()));
     }
+    if ($("#name").val() == "" || $("#photo").val() == "" || scoreArray.includes(NaN)) {
+      $("#error").html("<p> Please provide a valid name and photo link and check all questions are answered.</p>");
+    
+      // return;
+    }else {
+
+        
     console.log(scoreArray);
     var newMatch = {
       name: $("#name").val().trim(),
@@ -277,6 +281,7 @@
     }
     console.log(newMatch);
     $.post("/api/friends", newMatch, function (bestMatch) {
+
       $("#name").empty();
       $("#photo").empty();
       var nameDiv = $("<div>");
@@ -285,9 +290,27 @@
       photoDiv.append("<img id='photo-id' src=" + bestMatch.photo + " alt='" + bestMatch.name + "photo' width=200px>");
       $(".modal-body").append(nameDiv);
       $(".modal-body").append(photoDiv);
+      console.log(bestMatch.photo);
     });
-    
-  })
+  }
+  });
+  $("#close").on("click", function () {
+    $(".modal-body").empty();
+    $("#photo").val("");
+    $("#name").val("");
+    $('#q1').val("");
+    $('#q2').val("");
+    $('#q3').val("");
+    $('#q4').val("");
+    $('#q5').val("");
+    $('#q6').val("");
+    $('#q7').val("");
+    $('#q8').val("");
+    $('#q9').val("");
+    $('#q10').val("");
+
+  });
+
 </script>
 
 </html>
