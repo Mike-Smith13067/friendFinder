@@ -232,10 +232,9 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
+        <h4 class="modal-title">Your Match</h4>
       </div>
       <div class="modal-body">
-        <p>Some text in the modal.</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -277,16 +276,17 @@
       scores: scoreArray
     }
     console.log(newMatch);
-    $.post("/api/friends", newMatch).then(function (bestMatch) {
-      $("#name-div").empty();
-      $("#photo-div").empty();
-      var nameDiv = $("#name-div");
+    $.post("/api/friends", newMatch, function (bestMatch) {
+      $("#name").empty();
+      $("#photo").empty();
+      var nameDiv = $("<div>");
       nameDiv.append("<h1>" + bestMatch.name + "</h1>");
-      var photoDiv = $("#photo-div");
-      photoDiv.append("<img id='photo-id' src=" + bestFriend.photo + " alt='" + bestFriend.name + "photo' width=200px>");
-
+      var photoDiv = $("<div>");
+      photoDiv.append("<img id='photo-id' src=" + bestMatch.photo + " alt='" + bestMatch.name + "photo' width=200px>");
+      $(".modal-body").append(nameDiv);
+      $(".modal-body").append(photoDiv);
     });
-    $(".modal-body").append(potentialMatch);
+    
   })
 </script>
 

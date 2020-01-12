@@ -7,8 +7,8 @@ module.exports = (app) =>{
 
     app.post('/api/friends/', (req, res) =>{        
         var maxDifference = 100;
-        var potentialMatch
-        var client = req.body
+        var potentialMatch;
+        var client = req.body;
         
         friends.forEach(friend =>{
             var scoreDifference = 0;
@@ -23,6 +23,7 @@ module.exports = (app) =>{
         });
        res.json(potentialMatch);
        console.log(potentialMatch);
-       
+       friends.push(req.body);
+
     });
 }
